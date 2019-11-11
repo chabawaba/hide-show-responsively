@@ -16,34 +16,54 @@ html {
   box-sizing: inherit;
 }
 
-.dino {
-  display: inline-block;
+img {
+  width: 100%;
+  display: block;
 }
 
 .dino-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.dino:nth-child(2),
+.dino:nth-child(4) {
   display: none;
 }
+
 @media only screen and (min-width: 25em) {
 
-  img {
+  .dino:nth-child(2),
+  .dino:nth-child(4) {
     display: block;
   }
 
+  .dino {
+    width: 50%;
+  }
 
 }
 
 @media only screen and (min-width: 38em) {
 
-  img {
-    display: inline-block;
+  .dino {
+    width: 33.33%;
+  }
+
+  .dino:nth-child(1) {
+    display: none;
   }
 
 }
 
 @media only screen and (min-width: 60em) {
 
-  img {
-    display: inline-block;
+  .dino:nth-child(1) {
+    display: block;
+  }
+
+  .dino {
+    width: 25%;
   }
 
 }
